@@ -45,7 +45,15 @@ app.get("/api/users", function(req, res)
 res.status(200).json(users);
 })
 
+//random user
+app.get("/api/randomuser",function(req,res)
+{
+    var n=users.length;
+    const randomid=Math.floor(Math.random()*n);
+    res.status(200).json(users[randomid])
+}
 
+)
 
 
 
